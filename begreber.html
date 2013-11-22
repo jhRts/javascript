@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Getting · Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+                                                                              <script src="assets/js/html5shiv.js"></script>
+                                                                            <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!--====================================================================
+
+                        ::::::::: ::::::::::: ::::::::  
+                        :+:    :+:    :+:    :+:    :+: 
+                        +:+    +:+    +:+    +:+        
+                        +#++:++#:     +#+    +#++:++#++ 
+                        +#+    +#+    +#+           +#+ 
+                        #+#    #+#    #+#    #+#    #+# 
+                        ###    ###    ###     ########    
+        ==================================================================== -->
+
+    <!-- Navbar
+                                                                            ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="./index.html">Javascript</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="">
+                                <a href="./index.html">Indledning</a>
+                            </li>
+                            <li class="active">
+                                <a href="./begreber.html">Begreber</a>
+                            </li>
+                            <li class="">
+                                <a href="./dom.html">Dom</a>
+                            </li>
+                            <li class="">
+                                <a href="./opgaver.html">Opgaver</a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Subhead
+                                                                        ================================================== -->
+    <header class="jumbotron subhead" id="overview">
+        <div class="container">
+            <h1>Centrale begreber</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Docs nav
+                                                                                                    ================================================== -->
+        <div class="row">
+            <div class="span3 bs-docs-sidebar">
+                <ul class="nav nav-list bs-docs-sidenav">
+                
+                </ul>
+            </div>
+            <div class="span9">
+
+                <!-- Download
+                                                                                                                                                        ================================================== -->
+                <section id="Syntaks">
+                    <div class="page-header">
+                        <h1>1. Syntaks</h1>
+                    </div>
+                    <p class="lead">
+                        Når man koder Javascript, er det vigtigt at overholde syntaksen.
+                    </p>
+
+                    <p>
+                        Man skal ligesom med HTML og
+CSS, skrive sine instruktioner på en bestemt måde for at browserne kan forstå hvad der
+skal udføres og bare et enkelt forkert tegn kan gøre at alle de instruktioner man har
+skrevet ikke udføres ordentligt.
+                    </p>
+                    <p>
+                        Det er derfor som med alle andre sprog, en vigtig del af
+det at lære at kode i Javascript, at lære hvordan man opbygger en instruktion.
+                    </p>
+                    Det kan føles som om at man skal kunne hele sproget før man kan lave en lille del.
+                     Efterhånden som man får arbejdet med JavaScript, får man en større forståelse for hvordan det virker.
+</p>
+                </section>
+
+
+                <section id="download-bootstrap">
+                    <div class="page-header">
+                        <h1>2. Variabler</h1>
+                    </div>
+                    <p>
+                        Variabler bruges i Javascript til at holde styr på
+                        information. Man opretter altså en variabel  i sit Javascript program
+                        hvis man vil gemme noget, såsom et navn, et tal eller et resultat.
+                    </p>
+                    <p>
+                        Den variabel
+                        man opretter giver man et navn og når man så vil gemme information i
+                        eller læse information fra variablen bruger man navnet i Javascript
+                        koden.
+                    </p>
+                    <p>En variabel kan se således ud.</p>
+                    <pre class="prettyprint">var fornavn = "Søren";</pre>
+                    <p>Hvis vi lige ser på hver enkel del af denne linje</p>
+                    <dl class="dl-horizontal">
+
+                        <dt>var</dt>
+                        <dd>Definerer at dette er en variabel.</dd>
+                        <dt>fornavn</dt>
+                        <dd>Navnet på variablen. Det er op til dig at give det et navn af betydning.</dd>
+                        <dt>=</dt>
+                        <dd>Her siger du at variablen skal indholde en værdi.</dd>
+                        <dt>"Søren"</dt>
+                        <dd>Dette er værdien der skal tildeles, dette er også en type af string.</dd>
+                        <dt>;</dt>
+                        <dd>Dette betyder at linjen slutter her eller at der kommer ny kode efter semikolon.</dd>
+                    </dl>
+                    <p>En variabel kan også være af forskellige typer</p>
+
+
+
+                    <dl class="dl-horizontal">
+                        <!-- String -->
+                        <dt>String
+                        </dt>
+                        <dd><span>Dette kan være en kombination af bogstaver og tal.
+                                    
+                        </span>
+                            <pre class="prettyprint">var fornavn = "Søren";</pre>
+
+                            <br />
+                        </dd>
+                        <!-- END: String -->
+                        <!-- Boolean -->
+                        <dt>Boolean
+                        </dt>
+                        <dd><span>Dette kan enten være true eller false. Bruges for det meste når der skal spørges om noget.
+                        </span>
+
+                            <pre class="prettyprint">var noget = true;</pre>
+                            <br />
+                        </dd>
+                        <!-- END: Boolean -->
+                        <!-- Number -->
+
+                        <dt>Number
+                        </dt>
+                        <dd><span>Dennne indholder kun tal, det kan være 5 eller 5.5.</span>
+
+                            <pre class="prettyprint">var antal = 5;</pre>
+                            <br />
+                        </dd>
+
+                        <!-- END: Number -->
+                        <!-- undefined/null -->
+
+                        <dt>undefined/null
+                        </dt>
+                        <dd>Denne har ingen værdi.
+                     
+                            <pre class="prettyprint">var intet;</pre>
+                            <pre class="prettyprint">var intet = null;</pre>
+                            <br />
+                        </dd>
+
+                        <!-- END: undefined/null -->
+                        <!-- Array -->
+
+                        <dt>Array
+                        </dt>
+                        <dd>Denne kan indholde mange værdier og af flere typer. Denne type kan blive meget mere kompleks.
+                       
+                            <pre class="prettyprint">var bruger = new Array["Søren","Sven","Tim"];</pre>
+                            <br />
+                        </dd>
+
+                        <!-- END: Array -->
+                        <!-- Object -->
+
+                        <dt>Object
+                        </dt>
+                        <dd>Et Object kan ses som en Array med værdier og metoder, Alt er et Object pånær undefined og null.
+                    
+                            
+                            <br />
+                        </dd>
+
+                        <!-- END: Object -->
+                    </dl>
+
+
+                </section>
+
+                <section id="Operatorer">
+                    <div class="page-header">
+                        <h1>3. Operatorer</h1>
+                    </div>
+                    <p>
+                        Operatorer er et eller flere tegn såsom +, -, =, +=, ++, == for bare at nævne et par
+stykker af de mest brugte. Man bruger operatorer i mange af de instruktioner man
+                        laver i et Javascript program.</p> 
+                    <p>
+                        Operatorer bliver i Javascript brugt når man vil gøre noget, eksempelvis lave udregninger, 
+                        ændre værdi eller spørge om to værdier er ens.
+                    </p>
+                    
+                    <p>Et meget lille eksempel er vist her.</p>
+                    
+                    <pre class="prettyprint linenums">var navn = "tim";
+var tal = 5;
+                        
+var besked = navn + " er " + tal + " år."; // vil retunere: tim er 5 år
+
+var erDetSandt = tal == 5; // vil retunere: true
+                    </pre>
+                    <p>For at få den fulde forståelse skal der arbejdes med if og if else og du vil komme til at møde dette mange gange fremover.</p>
+                    <hr/>
+
+                </section>
+                <section id="Valg">
+                    
+                    <div class="page-header">
+                        <h1>4. Valg</h1>
+                    </div>
+                    <p>
+                        I Javascript programmer er der tit brug for at man er afhængig af om noget er sandt eller
+                        falskt. For eksempel hvis man trykker på en knap i en formular, og hvis man ikke
+                        har skrevet et navn i et input felt, skal der vises en besked til brugeren om at input feltet mangler en værdi.
+                    </p>
+                    
+                    <p>
+                        Til at lave valg i et Javascript program bruger man såkaldte if eller if else strukturer
+                        omkring sine instruktioner. Hvis man bare vil have noget udført hvis noget er sandt,
+                        nøjes man med en if struktur. Hvis man også vil have noget udført når noget er falskt
+                        bruger man en if else struktur.
+                    </p>
+                    <p>If</p>
+                    <pre class="prettyprint linenums">if (...) {
+...kode bliver udført..
+}</pre>
+                    <p>if else</p>
+                    <pre class="prettyprint linenums">if (...) {
+...kode bliver udført..
+}else{
+... Hvis if ikke er sandt så udfør denne kode ...
+}</pre>
+                    <p>Flere en et spøsmål</p>
+                    <pre class="prettyprint linenums">if (...) {
+... udfør hvis dette er sandt ...
+}else if(...){
+... eller udfør dette hvis den forrige er falsk og denne er sand ... 
+}else{
+... Hvis ingen er sand så udfør denne kode ...                                            
+}</pre>                    
+                    <p>Ok det giver jo ingen mening - så lad os se på noget rigtig kode</p>
+                    <pre class="prettyprint linenums">var fornavn = "Tim";
+                        
+if (fornavn == "Søren") {
+    // dette er false
+} else if (fornavn == "Tim") {
+    // Dette er sandt og denne if vil blive udført.
+}
+</pre>
+                    <p>Det kan tage noget tid at få en god forståelse af dette og at lære mange af de forskellige operatorer at kende.   
+                    </p>
+                </section>
+
+                <section id="Gentagelser">
+                    
+                    <div class="page-header">
+                        <h1>5. Gentagelser</h1>
+                    </div>
+                    <p>
+                        Vil man have noget gjort mange gange i sit Javascript program, behøver man ikke
+                        gentage sin instruktion det antal gange man vil have den udført. Man kan i
+                        stedet bruge en for, en while eller en do while struktur omkring sin instruktion. 
+                          
+                    </p>  <p>
+                          
+                              Gentagelsesstrukturerne benytter boolske udtryk til at afgøre om instruktioner skal
+                              gentages eller om der skal fortsættes videre i programmet.
+                          </p>
+                      
+                    <p>Vi kommer også til at bruge <code>document.write();</code> som kan skrive ud til html siden.</p>
+                    <pre class="prettyprint linenums">//For
+for ( var i = 0; i < 5; i++ )
+{
+    document.write( i );
+}
+
+//while
+var i = 0;
+while ( i < 5 )
+{
+    document.write( i );
+    i++;
+}
+                          
+//do while
+var x = 0;                      
+do{
+    document.write( x );
+    x++;
+}while(x<5);
+
+                      </pre>
+                    <p>Du kan prøve det af i en <a href="http://cdpn.io/jhRts/pen/FxEmh">CodePen</a></p>
+                    <p>Du kan også se test af dette i en <a href="http://codepen.io/jhRts/pen/xKfJy">CodePin</a> - husk at bruge Chrome eller Firefox ctrl + Shift + J for at se.</p>
+                </section>
+                
+
+                <section id="Funktioner">
+                          <div class="page-header">
+                          <h1>6. Funktioner</h1>
+                      </div>
+                    <p>
+                        Man kan selv lave sine egne funktioner i Javascript. Fordelen er at
+                        man kan samle en masse kode og give koden et funktionsnavn. Man kan
+                        derefter bare skrive navnet på funktionen og så får man udført al den kode man har
+                        samlet i funktionen.
+                    </p>
+                    <pre class="prettyprint linenums">skrivTilHtml();
+function skrivTilHtml() {
+    document.write("Dette kommer fra en function");
+}
+</pre>
+                    <p>
+                        Funktioner kan også modtage input, for eksempel en alder som man sender ind i sin
+                        funktion, hvor funktionen så gør noget med den alder den får som input.
+                        Input til funktioner kalder man for parameter og en funktion kan sagtens modtage flere
+                        parametre eller sende noget tilbage igen som output.
+                    </p>
+                    <pre class="prettyprint linenums">skrivTilHtml("Dette kommer fra en parameter");
+function skrivTilHtml(msg) {
+    document.write(msg);
+}
+</pre>
+
+                </section>
+
+
+                <!-- nav -->
+                <div class="row">
+                    <div class="span4 ">
+                        <a href="index.html" class="btn btn-large btn-block btn-primary" type="button"><i class="icon-backward icon-white"></i>Gå til forrige side</a>
+                    </div>
+                    <div class="span4 offset1">
+                        <a href="dom.html" class="btn btn-large btn-block btn-primary" type="button">Gå til næste side <i class="icon-forward icon-white"></i></a>
+                    </div>
+                </div>
+                <!-- nav :END-->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer
+                                                                            ================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <p class="lead">Undervisningsmateriale tilhøre Roskilde Tekniske Skole</p>
+            <p>|------------------------------[ Bootstrap licensed ]------------------------_______</p>
+            <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+            <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+            <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Le javascript
+                        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+</body>
+</html>

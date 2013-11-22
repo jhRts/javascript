@@ -1,0 +1,35 @@
+﻿/*
+
+::::::::: ::::::::::: ::::::::  
+:+:    :+:    :+:    :+:    :+: 
++:+    +:+    +:+    +:+        
++#++:++#:     +#+    +#++:++#++ 
++#+    +#+    +#+           +#+ 
+#+#    #+#    #+#    #+#    #+# 
+###    ###    ###     ########  
+
+*/
+
+
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus { /*bootstrap.css:4832  */
+    background-color: #0088cc;
+}
+
+
+
+body > .navbar { /* doc.css:29 */
+    font-size: 22px;
+}
+
+@media print { /* skal, skal ikke!? */
+    * {
+        display: none;
+    }
+}
+
+.container {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

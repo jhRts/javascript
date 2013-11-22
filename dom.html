@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Getting · Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+                                                                              <script src="assets/js/html5shiv.js"></script>
+                                                                            <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!--====================================================================
+
+                    ::::::::: ::::::::::: ::::::::
+                    :+:    :+:    :+:    :+:    :+:
+                    +:+    +:+    +:+    +:+
+                    +#++:++#:     +#+    +#++:++#++
+                    +#+    +#+    +#+           +#+
+                    #+#    #+#    #+#    #+#    #+#
+                    ###    ###    ###     ########
+    ==================================================================== -->
+
+    <!-- Navbar
+                                                                            ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="./index.html">Javascript</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="">
+                                <a href="./index.html">Indledning</a>
+                            </li>
+                            <li class="">
+                                <a href="./begreber.html">Begreber</a>
+                            </li>
+                            <li class="active">
+                                <a href="./dom.html">Dom</a>
+                            </li>
+                            <li class="">
+                                <a href="./opgaver.html">Opgaver</a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Subhead
+                                                                        ================================================== -->
+    <header class="jumbotron subhead" id="overview">
+        <div class="container">
+            <h1>HTML DOM </h1>
+            <p class="lead">Document Object Model</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Docs nav
+                                                                                                    ================================================== -->
+        <div class="row">
+            <div class="span3 bs-docs-sidebar">
+                <ul class="nav nav-list bs-docs-sidenav">
+                 
+                </ul>
+            </div>
+            <div class="span9">
+
+                <!-- Download
+                    ================================================== -->
+                <section id="Dom">
+                    <div class="page-header">
+                        <h1>1. Dom</h1>
+                    </div>
+                    <p>
+                        DOM er en forkortelse for Dokument Objekt Model og det er denne model der gør at
+                    Javascript kan styre en webside.
+                    DOM giver, når man har lavet en webside med HTML og CSS, adgang til at styre denne
+                    side, som man vil med Javascript.
+                    Man kan sige at når man laver en webside skabes der automatisk en masse objekter, som
+                    man så har adgang til med Javascript, dette er noget browseren sørger for.
+                    </p>
+                    <p>
+                        Man får for eksempel adgang til alle de tags og attributter man har lavet i HTML'en og
+                        forskellig browserinformation, såsom historikken, skærmstørrelsen og browsernavnet.
+                    </p>
+                    <p>
+                        DOM objekterne er samlet i et såkaldt nodetræ der automatisk oprettes, når en
+                        webside ses i en browser.
+                    </p>
+
+
+                    <p class="text-center">
+                        <img src="http://www.w3schools.com/js/pic_htmltree.gif" /><br />
+                        Billedet her er fra w3schools.com
+                    </p>
+
+
+                    <p>
+                        DOM objekter har forskellige egenskaber, funktioner og hændelser, som man bruger på
+                        forskellig vis i sine Javascript programmer.
+                        Et eksempel på dette et Div tag objektet, som har egenskab innerHTML, der indeholder htmlen fra Div taget,
+                        window objektet som har hændelsen onload, der registrerer når websiden er indlæst.
+                    </p>
+
+
+                </section>
+                <section id="Webside-livscyklus">
+                    <div class="page-header">
+                        <h1>2. Webside livscyklus</h1>
+                    </div>
+                    
+                        <p class="lead">Hvad sker der med en webside og dens javascript</p>
+                    <!-- <div class="alert alert-info">
+                        <p>Har haft svært ved at finde et præcis forklaring af dette. Det er nogenlunde sådan her det funger. </p>
+                    </div>-->
+                    <p>
+                        Der skal ses på hvad der sker fra start til slut med en webside. 
+                        Når en webside bliver åbnet af en browser, sker der nogle handlinger fra browserens side.
+
+                    </p>
+                    <ol>
+
+                        <li>Siden bliver hentet fra en server eller fil. Brugeren ser intet inde på siden.
+
+                        </li>
+                        <li>Siden begynder at blive loadet ind i browseren. brugeren kan nu begynde at se koden.
+
+                        </li>
+                        <li>Hvis browseren undervejs møder et script tag (javascript), vil browseren stoppe op og udføre koden eller hente filen.
+
+                        </li>
+                        <li>HTML og CSS er nu færdig med at loade.
+
+                        </li>
+                        <li>Hvis billederne er færdige med at loade, så vil de blive vist.
+
+                        </li>
+                    </ol>
+
+                    <p>
+                        Det vil sige at når vi skriver javascript oppe i head taget, så stopper browseren op og udfører noget script.
+                        Dette vil resulterere i at brugeren desværre kan få vist en hvid side i et kort stykke tid. 
+                        Dette sker kun hvis der er noget der skal udføres.
+
+                    </p>
+                    <p>
+                        Vi kan heldigvis komme rundt om dette ved nogle forskelige metoder. 
+                        En af disse metoder er at flytte alt javascript ned til lige over body.
+                        Dette vil også løse et andet problem, som vi vil komme tilbage til.
+
+                    </p>
+                    <pre class="prettyprint linenums">
+    ...
+    &lt;body&gt;
+        &lt;h1&gt;title&lt;/h1&gt;
+        &lt;p&gt;tekst&lt;/p&gt;
+        &lt;script src=&quot;javascript.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                    <p>
+                        En metode til, er at skrive til et event <code>window.onload </code>. 
+                        Dette event bliver udført når websiden er færdig med at loade.
+                        Og der kan skrives til eventet mange gange.
+                    </p>
+                    <pre class="prettyprint linenums">window.onload = function() {
+    ... kode her ..
+}
+</pre>
+                    <p>
+                        Nu kan javascripet godt stå oppe i head taget, men det anbefales ikke.
+                        
+                    </p>
+
+                    <p>
+                        En anden god grund til at enten placerere javascript i bunden eller i en onload, 
+                        er at javascript kun kan se det html, som er loadet ind på siden. 
+
+                    </p>
+                    <p>
+                        Her er et eksempel på hvordan det kunne se ud. I eksemplet bliver der brugt en funktion som kan tage 
+                        fat i html der har en id <code>document.getElementById("tagId")</code>.
+
+                    </p>
+
+            <!--        <html>
+                        <head>
+                            <script>
+                                var tag = document.getElementById("tagId");
+                            </script>
+                        </head>
+                        <body>
+                            <div id="tagId"></div>
+                        </body>
+                    </html>-->
+
+                    <p>
+                        
+                        Her kan javascript ikke finde div taget.
+
+                    </p>
+                    <pre class="prettyprint linenums">
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+            var tag = document.getElementById(&quot;tagId&quot;);
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;Div1&quot;&gt;&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+                    <p>
+                        
+                        Her kan javascript godt finde div taget.
+
+                    </p>
+                    <pre class="prettyprint linenums">
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;tagId&quot;&gt;&lt;/div&gt;  
+                            
+        &lt;script&gt;
+            var tag = document.getElementById(&quot;tagId&quot;);
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                    <p>
+                        
+                        Og her med en onload, her kan javascript godt finde div taget
+
+                    </p>
+                    
+                    <pre class="prettyprint linenums"> 
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+            window.onload = function (){
+                var tag = document.getElementById(&quot;tagId&quot;);
+            }
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;tagId&quot;&gt;&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                </section>
+
+
+
+                <!-- nav -->
+                <div class="row">
+                    <div class="span4 ">
+                        <a href="begreber.html" class="btn btn-large btn-block btn-primary" type="button"><i class="icon-backward icon-white"></i>Gå til forrige side</a>
+                    </div>
+                    <div class="span4 offset1">
+                        <a href="opgaver.html" class="btn btn-large btn-block btn-primary" type="button">Gå til næste side <i class="icon-forward icon-white"></i></a>
+                    </div>
+                </div>
+                <!-- nav :END-->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer
+                                                                            ================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+            <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+            <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Le javascript
+                        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+</body>
+</html>
