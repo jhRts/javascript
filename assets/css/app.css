@@ -27,7 +27,7 @@ body > .navbar { /* doc.css:29 */
     }
 }
 */
-.pre *{
+pre *{
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
