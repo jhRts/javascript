@@ -20,14 +20,14 @@
 body > .navbar { /* doc.css:29 */
     font-size: 22px;
 }
-
-@media print { /* skal, skal ikke!? */
+/*
+@media print { 
     * {
         display: none;
     }
 }
-
-.container {
+*/
+.pre {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
