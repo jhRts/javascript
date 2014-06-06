@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Getting · Bootstrap</title>
+    <title>WI GF - Javascript Opgaver</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -11,7 +11,6 @@
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-    <link href="assets/css/app.css" rel="stylesheet" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
                                           <script src="assets/js/html5shiv.js"></script>
@@ -24,17 +23,6 @@
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 </head>
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
-    <!--====================================================================
-
-                    ::::::::: ::::::::::: ::::::::
-                    :+:    :+:    :+:    :+:    :+:
-                    +:+    +:+    +:+    +:+
-                    +#++:++#:     +#+    +#++:++#++
-                    +#+    +#+    +#+           +#+
-                    #+#    #+#    #+#    #+#    #+#
-                    ###    ###    ###     ########
-    ==================================================================== -->
-
     <!-- Navbar
                                         ================================================== -->
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -69,7 +57,8 @@
                                     ================================================== -->
     <header class="jumbotron subhead" id="overview">
         <div class="container">
-            <h1>JavaScript Opgaver</h1>
+            <h1>Indledning til JavaScript</h1>
+            <!--p class="lead">Overview of the project, its contents, and how to get started with a simple template.</p-->
         </div>
     </header>
 
@@ -91,8 +80,8 @@
                         <h1>1. Opgaver</h1>
                     </div>
                     <p class="lead">
-                        Du skal nu lave et interaktivt kort, et galleri, formularvalidering og en dropdownmenu med Javascript.
-                        Selve grundopgaverne skulle du gerne kunne løse, ved at nøjes med bare at følge opgavebeskrivelserne.
+                        Du skal nu lave et interaktivt kort, en menu som viser den aktive side, indhold som kan udvides, et galleri og en valideret formular med Javascript.
+                        Disse grundliggende Javascript opgaver skulle du gerne kunne løse, ved at at følge de forskellige opgavebeskrivelser og benytte den HTML og CSS viden, du allerede burde have.
                     </p>
 
                 </section>
@@ -100,7 +89,8 @@
                 <!-- Interaktivt kort -->
                 <section id="Interaktivtkort">
                     <div class="page-header">
-                        <h1>Interaktivt kort</h1>
+                        <h1>Opgave</h1>
+                        <p class="lead">Interaktivt kort</p>
                     </div>
                     <p>
                         Den første Javascript opgave bygger på det simple princip at en hændelse sætter gang i
@@ -134,15 +124,14 @@
                         Opsætningen skal være på følgende måde:
                     </p>
 
-                    <img src="img/opgaver/opgaveMap/opgave1.jpg" />
-                    <a target="_blank" href="img/opgaver/opgaveMap/Roskilde.png">Hent billede her.</a>
+                    <img src="img/Opgaver/OpgaveKort/KortOpbygning.png" />
+                    <a target="_blank" href="img/Opgaver/OpgaveKort/Roskilde.png">Hent billede her.</a>
                     <p>
                         De to p tags skal ikke vises til at starte med, så skjul disse to med display egenskaben
                         sat til none i CSS'en.
                     </p>
                     <p>
-                        Efter at alt HTML'en og CSS'en er lavet, er du nu klar til at tilføje en Javascript fil i head
-                        tagget på websiden med det interaktive kort, som forklaret først i kompendiet i afsnittet "Indsættelse af Javascript".
+                        Efter at alt HTML'en og CSS'en er lavet, er du nu klar til at tilføje en Javascript fil til sidst i HTML filen lige inden body tagget lukker, som forklaret først i kompendiet i afsnittet "Indsættelse af Javascript".
                     </p>
                     <p>
                         
@@ -163,14 +152,14 @@
                     <p>
                         Koden til at gøre dette ser således ud og skal tilføjes i Javascript filen:
                     </p>
-                    <pre class="prettyprint linenums">
-window.onload = function()
+<pre class="prettyprint linenums">
+window.addEventListener( 'load', function()
 {
-document.getElementById("DivKassePunkt1").onmouseover = Punkt1Over;
-document.getElementById("DivKassePunkt1").onmouseout = Punkt1Ud;
-document.getElementById("DivKassePunkt2").onmouseover = Punkt2Over;
-document.getElementById("DivKassePunkt2").onmouseout = Punkt2Ud;
-};
+	document.getElementById("DivKassePunkt1").onmouseover = Punkt1Over;
+	document.getElementById("DivKassePunkt1").onmouseout = Punkt1Ud;
+	document.getElementById("DivKassePunkt2").onmouseover = Punkt2Over;
+	document.getElementById("DivKassePunkt2").onmouseout = Punkt2Ud;
+});
 </pre>
 
                     <p>
@@ -187,22 +176,24 @@ document.getElementById("DivKassePunkt2").onmouseout = Punkt2Ud;
                     <p>
                         Koden til de fire funktioner ser ud på følgende måde og tilføjes i Javascript filen.
                     </p>
-                    <pre class="prettyprint linenums">function Punkt1Over()
+                   <pre class="prettyprint linenums">
+function Punkt1Over()
 {
-document.getElementById("PTag1").style.display = 'inline-block';
+	document.getElementById("PTag1").style.display = 'inline-block';
 }
 function Punkt1Ud()
 {
-document.getElementById("PTag1").style.display = 'none';
+	document.getElementById("PTag1").style.display = 'none';
 }
 function Punkt2Over()
 {
-document.getElementById("PTag2").style.display = 'inline-block';
+	document.getElementById("PTag2").style.display = 'inline-block';
 }
 function Punkt2Ud()
 {
-document.getElementById("PTag2").style.display = 'none';
-}</pre>
+	document.getElementById("PTag2").style.display = 'none';
+}
+</pre>
                     <p>
                         Hver af funktionerne tager fat i et p tag med en bestemt id og ændrer CSS'en for dette
                         element. I de 4 funktioner er det display egenskaben der skal ændres frem og tilbage
@@ -219,86 +210,119 @@ document.getElementById("PTag2").style.display = 'none';
                     </p>
                 </section>
 
-                <!-- Dropdownmenu -->
-                <section id="Dropdownmenu">
+                <!-- Menu -->
+                <section id="Menu">
                     <div class="page-header">
-                        <h1>Dropdownmenu</h1>
+                        <h1>Opgave </h1>
+                        <p class="lead">Menu</p>
                     </div>
                     <p>
-                        Start med at lave en tom HTML side med en CSS fil tilknyttet. Herefter skal HTML'en og
-                        CSS'en til menuen først laves - inden Javascriptet tilføjes og får punkterne til at udvide sig
-                        når man holder musen over dem.
-                        <p>
-                            Dropdownmenuen skal kun bestå af ul, li og a tags og tekst til punkterne.
-                            Første niveau er en ul liste hvor li punkterne kommer vandret efter hinanden.
-                            Andet niveau er en ul liste der er i et li punkt fra første niveau og her kommer
-                            punkterne lodret under hinanden under første niveau punktet..
-                        </p>
-                        <p>
-                            Tredje niveau er ligesom andet niveau en ul liste der er i et li punkt fra andet og her
-                            kommer punkterne lodret under hinanden ud for andet niveau punktet.
-                        </p>
-                        <p>
-                            Du skal blandt andet bruge position relative og absolute i CSS'en til det tredje niveau og der
-                            skal ske et farveskift på punkternes baggrundsfarve, når musen kommer over dem.
-                        </p>
-                        <p>
-                            Lav nu HTML'en og CSS'en så menuen kommer til at se ud på nogenlunde følgende måde; 
-                            med en ul liste i en ul liste i en ul liste.
-                        </p>
-                        <img src="img/opgaver/opgaveNav/nav.jpg" />
-                        <p>
-                            Når du har lavet dropdownmenuen skal du som det sidste inden Javascript koden tilføjes
-                            skjule andet og tredje niveau i CSS'en med display egenskaben sat til værdien none.
-                        </p>
-                        Så skal der tilføjes Javascript til dropdownmenuen, så punkterne kommer frem igen, når
-                        musen kommer over punkterne.
+                       Den næste Javascript opgave går ud på at lave en menu som viser den aktive side. Menuen skal altså selv finde ud af hvilken side man er inde på, ved at sammenligne browser URL'en med de forskellige URL'er i menuen og herefter tilføje noget CSS på det menupunkt som er det aktive. 
+                    </p>
+                    
+                    <p>
+                    Der skal selvfølgelig bruges en HTML fil, en CSS fil og en Javascript fil for at løse denne opgave. HTML filen skal hedde index.html, indeholde en menu og derudover linkes til både en CSS fil i head tagget og en Javascript fil til sidst i body tagget, som så håndterer menuen. Start derfor med at lave en HTML fil og en CSS fil. HTML filen skal indeholde en menu der består af et nav tag med navnet HovedMenu som id indeholdende et ul tag, der så igen indeholder 3 li tags, som hver især indeholder a tags med links til HTML siderne, index.html, produkter.html og kontakt.html. Den tilhørerende CSS fil skal til at starte med, kun fjerne prikkerne, padding og margin på ul tagget. Lav også en klasse i CSS filen, der hedder active og sætter background egenskaben til farven rød. Tilføj så bagefter Javascript filen til sidst i HTML filen. Nu er HTML og CSS færdigt og resten der skal laves er Javascript.
                     </p>
                     <p>
-                        I denne opgave skal du bruge to funktioner med parametrene, kaldet "MusOver" og "MusUd"
-                        og this for at få dropdownmenuen til at virke.
+						Det første som skal laves i Javascript for at få menuen til at virke på websiden er en funktion, når websiden bliver loadet i browseren. Denne funktion håndterer menuen på websiden.
                     </p>
-                    <p>
-                        Tilknyt en Javascript fil til websiden på samme måde som i de foregående opgaver.
-                        I stedet for at forbinde hændelserne med funktionerne i en hændelse når websiden er
-                        indlæst, skal du i stedet her forbinde hændelser med funktioner i HTML'en på li
-                        punkterne.
-                    </p>
-                    <p>
-                        Det kommer til at se ud på følgende måde, for de li tags der skal kunne udvide sig.
-                    </p>
-                    <pre class="prettyprint">&lt;li onmouseover="MusOver(this)" onmouseout="MusUd(this)"></pre>
-                    <p>
-                        Her bruges der altså HTML attributter til at tilføje Javascript, i dette tilfælde to
-                        forskellige funktioner. Begge funktioner får this som parameter, hvilket bevirker at det li
-                        tag som sætter funktionerne i gang sendes med til funktionerne, så de kan bruges til at
-                        udvide ul tagget der ligger inde i li punktet. Det smarte ved den fremgangsmåde er at de
-                        samme funktioner kan benyttes til forskellige elementer, i stedet for at lave en seperat
-                        funktion til hver hændelse.
-                    </p>
-                    <p>
-                        De to funktioner som sættes i gang når musen kommer over punkterne, indeholder kun en instruktion, hvor det første ul tag, som er et punkts underpunkter får ændret CSS
-                        egenskaben display mellem værdierne block og none.
-                    </p>
-                    <p>
-                        Funktionerne ser ud som følger.
-                    </p>
-                    <pre class="prettyprint linenums">function MusOver( LiPunkt )
+<pre class="prettyprint linenums">
+window.addEventListener( 'load', function()
 {
-LiPunkt.getElementsByTagName('ul')[0].style.display = "block";
+	MenuPunktAktiv();
+});
+</pre>
+                    <p>
+                        Dette gør at når HTML siden er indlæst i browseren, kalder Javascript MenuPunktAktiv funktionen, som tager sig af at sætte klassen active på det rigtige link i menuen. Når dette er gjort skal funktionen MenuPunktAktiv så oprettes og udspecificeres, med hensyn til hvordan den skal gøre dette.
+                    </p>
+                    <p>
+                        Funktionen MenuPunktAktiv ser ud som følger og skal placeres efter Javascript koden der sætter funktionen i gang, når websiden bliver indlæst.
+                    </p>
+<pre class="prettyprint linenums">
+function MenuPunktAktiv()
+{
+	var current = "" + window.location;  
+	var nav = document.getElementById( 'HovedMenu' );
+	var anchor = nav.getElementsByTagName( 'a' );
+
+	if( current.search( ".html" ) == -1 )
+	{
+		current = current + "index.html";
+	}
+
+	for ( var i = 0; i < anchor.length; i++ )
+	{
+		if( current.toLowerCase() == anchor[i].href.toLowerCase() )
+		{
+			anchor[i].className = "active";
+		}
+	}
+}                    
+</pre>
+                    <p>
+                        Det første som funktionen gør er at oprette tre forskellige variabler, current, nav og anchor. Variablen current indeholder browser URL'en, variablen nav indeholder nav tagget med navnet HovedMenu som id og variablen anchor indeholder alle a tagsene i nav tagget, det vil sige de forskellige links i menuen. Det næste i funktionen er et if check om den nuværende browser URL ikke ender på html, hvis dette er tilfældet får variablen current tilføjet index.html til sidst i URL'en. Dette gøres da man nogen gange ikke skriver index.html i browser URL'en, eksempelvis når man går ind på http://RTS.DK, så er man i virkeligheden inde på http://RTS.DK/index.html. Hvis det er php filer i stedet for html man bruger Javascript funktionen på, ændres .html bare til .php i stedet for i koden. Til sidst i funktionen løber en for løkke igennem alle links i nav menuen og for hvert link spørges der med en if betingelse om browser URL'en og link URL'en er ens. Hvis de to er ens får linket tilføjet klassen active, som blev oprettet i CSS filen tidligere. Nu skulle menuen gerne virke hvis html filen er blevet kaldt index. Opret nu de to andre HTML filer produkter.html og kontakt.html som menuen henviser til og indsæt menuen i HTML'en på samme måde som index.html. Husk også at tilføje både CSS og Javascript filerne
+                    </p>
+
+
+                </section>
+                
+                <section id="Indhold">
+                    <div class="page-header">
+                        <h1>Opgave </h1>
+                        <p class="lead">Indhold</p>
+                    </div>                    
+                     <p>
+                        Nogen gange kan der på en webside være et behov for at skjule noget indhold og først vise det når brugeren af websiden ønsker at få tilgang til det. Altså eksempelvis at skjule og vise noget brødtekst når man klikker på en overskrift, som det er tilfældet i denne opgave.
+                    </p>
+                    <p>
+						For at få løst denne opgave skal der igen bruges en HTML, en CSS og en Javascript fil som skal oprettes og linkes sammen. HTML filen skal indeholde to div tags, der hver især indeholder først et h1 tag og så et p tag med noget tekst i bå overskriften og i brødteksten. De to div tags skal begge have påført en klasse med navnet info. I den tilhørerende CSS fil skal p tagsene i info div kasserne skjules ved at sætte display egenskaben til none. Javascript filen sørger for resten og skal først have tilføjet en lytter der fanger når HTML'en er blevet indlæst i browseren, ligesom de forrige opgaver har fået til at starte med. Her skal funktionen InfoKasser sættes i gang, som skal tage sig af at få overskrifterne til at reagere på at brugeren trykker på dem.
+                    </p>
+                    <p>
+                    	Igangsætning af funktionen InfoKasser ser ud på følgende måde.
+                    </p>
+<pre class="prettyprint linenums">
+window.addEventListener( 'load', function()
+{
+	InfoKasser();
+});
+</pre>
+                     <p>
+                     	Nu skal funktionen InfoKasser så laves. Funktionen skal når HTML'en er blevet indlæst tage fat i alle de elementer i HTML'en der har fået påført klassen info, det vil sige de to div kasser der er i HTML'en og sætte en lytter på dem som sætter funktionen InfoKasseSkift i gang når man trykker på dem.
+                     </p>
+                     <p>
+                        Funktionen InfoKasser kommer efter load lytteren er sat på og funktionen ser ud som følger.
+                    </p>
+<pre class="prettyprint linenums">
+function InfoKasser()
+{
+    for ( var i = 0; i < document.getElementsByClassName('info').length; i++ )
+    {
+        document.getElementsByClassName('info')[i].onclick = InfoKasseSkift;
+    }
 }
-function MusUd( LiPunkt )
-{
-LiPunkt.getElementsByTagName('ul')[0].style.display = "none";
-}</pre>
-                    <p>
-                        Funktionerne har fået navnet LiPunkt som parameter, hvilket er det li punkt som bliver
-                        sendt til funktionen med this i HTML'en. LiPunkt navnet kan så bruges inde i
-                        funktionerne til at få fat i det første ul tag, som ligger på plads nul i det array af en
-                        bestemt type tags, som getElementsByTagName funktionen returnerer.
+</pre>
+    				<p>
+                    	Funktionen InfoKasser starter med at sætte en for løkke i gang som gennemløber alle de elementer der har fået påført klassenavnet info. Der tages så inde i for løkken fat på hvert element og en lytter tilføjes elementet så en ny funktion kaldet InfoKasseSkift sættes i gang hvis man klikker på elementet. Dette gør at alle div kasser med klassen info og indeholdende en overskrift og noget brødtekst, vil komme til at reagere på brugerens museklik. Nye div kasser med overskrift og brødtekst kan nu nemt tilføjes i HTML'en ved bare at tilføje klassen info på div tagget.
                     </p>
                     <p>
-                        Test nu om den dropdownmenu du har lavet virker i browseren. 
+                    	Funktionen InfoKasseSkift skal tilføjes efter funktionen InfoKasser og den ser ud som følger.
+                    </p>
+                    
+<pre class="prettyprint linenums">
+function InfoKasseSkift()
+{
+    if( this.getElementsByTagName('p')[0].style.display != "block" )
+    {
+        this.getElementsByTagName('p')[0].style.display = "block";
+    }
+    else
+    {
+        this.getElementsByTagName('p')[0].style.display = "none";
+    }
+}
+</pre>
+                    <p>
+                        Funktionen InfoKasseSkift indeholder en if betingelse der checker om det første p tag i elementet this, det vil sige den div kasse brugeren trykkede på, ikke har display egenskaben sat til block og hvis ikke at den har dette, så får den det. Altså hvis p tagget inde i div tagget er skjult, så vis det. Hvis if betingelsen ikke opfyldes, det vil sige at p tagget i div kassen allerede har display egenskaben sat til block og p tagget kan ses, så skal display egenskaben sættes til none og p tagget bliver så skjult. Funktionen InfoKasseSkift ændrer altså display egenskaben på p tagget frem og tilbage når man klikker på div tagget.
                     </p>
 
                 </section>
@@ -306,142 +330,225 @@ LiPunkt.getElementsByTagName('ul')[0].style.display = "none";
                 <!-- Galleri -->
                 <section id="Galleri">
                     <div class="page-header">
-                        <h1>Galleri</h1>
+                        <h1>Opgave </h1>
+                        <p class="lead">Galleri</p>
                     </div>
                     <p>
-                        Den næste opgave er at lave et simpelt galleri og til denne opgave behøves der ingen
-                        CSS, men der skal til gengæld bruges nogen billeder, så find mindst tre billeder, helst i
-                        den samme størrelse alle sammen og placer dem i en mappe der hedder "Billeder", inden
-                        du går i gang med at lave HTML'en til galleriet.
+                       Gallerier kan laves på mange måder og ved eksempelvis kun at benytte HTML eller fortrinsvis CSS, men nu skal der laves et Javascript galleri der primært fungerer ved hjælp af Javascript, hvilket giver lidt flere muligheder for et mere avanceret galleri end hvis der kun benyttes HTML og CSS til galleriet. Gaslleriet kommer til at fungere således at det første billede i galleriet vises og nedenunder er der så først thumbnails man kan trykke på for alle billederne i galleriet og nedenunder dette er der en frem knap og en tilbage knap, til at hoppe rundt mellem billederne i galleriet. Når man slutningen eller begyndelsen af galleriet og trykker igen starter galleriet så bare i den anden ende, så man kan hoppe uendeligt mellem billederne. Trykker man på selv galleri billedet bliver billedet forstørret op til fuldskærm. Galleriet som skal laves her, ender med at se ud på følgende måde, både som almindelig og når det er i fuldskærm.
                     </p>
+                    
+                    <img src="img/Opgaver/OpgaveGalleri/Galleri.png" />
+                    
                     <p>
-                        Lav nu en ny tom HTML side til galleriet.
-                        HTML'en der skal bruges til galleriet består af først et input tag af typen button, et img
-                        tag der har et af navnet på et dine billeder sat i src attributten og til sidst igen et input
-                        tag af typen button. De to knapper skal henholdsvis have value attributten sat til
-                        teksten "Tilbage" og "Frem", så man kan se hvad knapperne hver især gør.
+                    	Det første der skal bruges for at lave dette Javascript billedegalleri, er selvfølgelig nogle billeder, så find 7 forskellige jpg billeder i størrelse 300px*200px og placer dem i en mappe med navnet Billeder og omdøb billederne til a.jpg, b.jpg, c.jpg, d.jpg, e.jpg, f.jpg og g.jpg. Der skal naturligvis også bruges en HTML fil, en CSS fil og en Javascript fil som er linket sammen, så opret og link disse filer og læg dem ved siden af mappen billeder.
                     </p>
+                    
                     <p>
-                        Du skulle gerne have en HTML side med to knapper på hver sin side af et billede.
-                        Giv nu venstre knap navnet "KnapTilbage" som id, billedet navnet "Galleri" som id og
-                        højre knap navnet "KnapFrem" som id.<br />
-                        Nu er HTML'en færdig og du skal nu i gang med at tilføje Javascript til galleriet, så
-                        knapperne kommer til at virke.
+                    	Så skal HTML'en sættes op hvilket ser ud på følgende måde.
                     </p>
-                    <p>
-                        Tilføj nu en tom Javascript fil med et script tag i head tagget.
-                        Den Javascript kode du skal bruge for at få galleriet til at virke involverer arrays og valg
-                        som nye ting.
-                    </p>
-                    <p>
-                        Det allerførste du skal gøre i Javascript filen er at lave en hændelse, der går i gang når
-                        websiden er indlæst, ligesom i sidste opgave. Der skal i denne opgave dog kun være 2
-                        hændelser i stedet for 4. De to hændelser der skal være er, at når man klikker på
-                        knapperne, sætter de hver deres funktion i gang, henholdsvis funktionen "GalleriTilbage"
-                        og funktionen "GalleriFrem".
-                    </p>
-                    <p>Den første kode kommer altså til at se ud på følgende måde.</p>
-                    <pre class="prettyprint linenums">window.onload = function()
-{
-document.getElementById("KnapTilbage").onclick = GalleriTilbage;
-document.getElementById("KnapFrem").onclick = GalleriFrem;
-};</pre>
-                    <p>
-                        Og nu skal de to funktioner der rent faktisk hopper frem og tilbage i galleriet så
-                        selvfølgelig laves. Men inden at disse to funktioner laves skal der lige laves en variabel
-                        og et array som funktionerne begge skal benytte sig af. Variablen skal hedde
-                        "BilledeNummer" og holde styr på hvilket nummer billede der vises i galleriet og arrayet
-                        skal hedde "Billeder" og holde styr på navnene på de forskellige billeder.
-                        Koden til dette, ser ud som følger.
-                    </p>
-                    <pre class="prettyprint linenums">var BilledeNummer = 0;
-var Billeder = [ "Billeder/Chrysanthemum.jpg", "Billeder/Hydrangeas.jpg",
-"Billeder/Tulips.jpg" ];</pre>
-                    <p>
-                        Du skal selvfølgelig ændre navnene i arrayet til de navne som billederne har i mappen og
-                        hvis du har mere end 3, tilføjes der flere til arrayet ved at sætte komma imellem
-                        navnene. Billedenummeret starter med at være 0, fordi den første plads i arrayet er plads 0 og ikke 1.
-                    </p>
+                    
+
+<pre class="prettyprint linenums">                    
+&ltdiv id="GalleriContainer">
+    &ltdiv id="Galleri">
+        &ltimg alt="" id="GalleriBillede" src="Billeder/A.jpg" />
+        &ltdiv id="GalleriThumbnails">&lt/div>
+        &ltdiv id="GalleriKnapper">
+            &ltinput type="button" id="KnapTilbage" value="&lt">&lt/button>
+            &ltinput type="button" id="KnapFrem" value=">">&lt/button>
+        &lt/div>
+    &lt/div>
+&lt/div>
+</pre>                
 
                     <p>
-                        Nu skal funktionerne der bruger variablen og arrayet så laves, og du skal starte med at
-                        lave funktionen til tilbageknappen.
+                    	HTML'en består af en container div, der er samme bredde som billederne og en galleri div som er den der bliver stor når man trykker billedet. Galleri div'en er sat til 100% og bliver så samme størrelse som containeren. I galleri div'en ligger så et img tag, som så også er sat til 100% og dermed bliver samme størrelse som de omkringliggende div'er. Img tagget bliver det tag som med Javascript skifter billedstien, når man trykker på knapperne og de forskellige billeder dermed vises. Nedenunder img tagget ligger en div hvor der med Javascript bliver lavet thumbnails knapper til de forskellige billeder, der er i galleriet. Videre nedenunder igen er der så en tilbage og en frem knap, i form af 2 button tags.
                     </p>
+                    
                     <p>
-                        Den indeholder en if else struktur, der tjekker om billedenummeret er 0. Hvis det er
-                        det, hvilket det vil være når man er på det første billede, skal billedenummeret sættes
-                        til det antal billeder der er i arrayet minus et, eftersom arrayet starter med plads 0.
-                        Dette gør at billedenummeret bliver sat til det sidste billede hvis man er på det første
-                        billede i arrayet, så man kan blive ved med at trykke på tilbageknappen og hoppe til
-                        sidste billede, når man står på det første billede.
+                    	Så skal CSS'en der styler galleriet laves i CSS filen og den ser ud på følgende måde. Den id som er tilknyttet galleri div'en har position egenskaben sat til relative og når man trykker på billedet bliver det større ved at position egenskaben ændres til fixed og dermed bliver 100% af browser bredden, det vil sige fuldskærm. Billedet bliver normal størrelse igen ved at sætte position egenskaben tilbage til relative, når man trykker på det store billede igen. De thumbnails knapper Javascripten automatisk laver bliver styret sidst i CSS'en med størrelser afstand til hinanden og en farve. CSS'en til galleriet ser ud på følgende måde.
                     </p>
-                    <p>
-                        Hvis ikke billedenummeret er 0, er det fordi man er på et af de andre billeder i
-                        arrayet og man skal derfor bare et nummer tilbage i arrayet, hvilket else delen tager sig
-                        af, ved bare at minusse billedenummeret med 1.
-                    </p>
-                    <p>
-                        Efter at billedenummeret er blevet ændret, skal billedet rent faktisk ændres på img
-                        tagget. Dette klares med bare en instruktion, der tager fat i img tagget og sætter src
-                        attributten til billedenavnet fra arrayet, der er på pladsen som billedenummeret lige er
-                        blevet ændret til.
-                    </p>
-                    <p>
-                        Koden til tilbage funktionen ender med at se ud sådan her.
-                    </p>
-                    <pre class="prettyprint linenums">function GalleriTilbage()
+
+<pre class="prettyprint linenums">
+#GalleriContainer
 {
-if( BilledeNummer == 0 )
-{
-BilledeNummer = Billeder.length - 1;
+	width: 300px;
+	margin: auto;
+	text-align:center;
 }
-else
+
+#Galleri
 {
-BilledeNummer -= 1;
+	width: 100%;
+	background-color:#000;
+	position:relative;
+	left: 0px;
+	top: 0px;
 }
-document.getElementById( "Galleri" ).src = Billeder[ BilledeNummer ];
-}</pre>
+
+#KnapTilbage, #KnapFrem
+{
+	cursor: pointer;
+	background-color:#FFF;
+}
+
+#GalleriBillede
+{
+	width: 100%;
+}
+
+#GalleriThumbnails
+{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+#GalleriThumbnails a
+{
+	width: 20px;
+	height: 20px;
+	background-color:#FFF;
+	margin-right: 10px;
+	float: left;
+	cursor: pointer;	
+}
+</pre> 
+                    
                     <p>
-                        Hvor du i sidste opgave tog fat i et HTML element og ændrede CSS med style attributten,
-                        ændrer du i denne opgave på en HTML attribut. Du kan ændre alle HTML attributter fra
-                        Javascript af ved at tage fat i det HTML element du vil med<br />
-                        document.getElementById("ID"). efterfulgt af den attribut du vil ændre, eksempelvis src
-                        ligesom her.
+                    Allerførst i Javascript filen skal der oprettes variabler til billedstierne og til at styre om galleriet skal være stort eller ej, plus hvilket et nummer af billederne man ser på i galleriet. Første variabel er et array med billedstierne, anden variabel er en boolean med sand og falsk værdier og tredje variabel er en integer med et heltal. Første billedenummer er 0 da dette er den første position i et array.                    
                     </p>
+                    
+<pre class="prettyprint linenums">
+var Billeder = [ "Billeder/A.jpg", "Billeder/B.jpg", "Billeder/C.jpg", "Billeder/D.jpg", "Billeder/E.jpg", "Billeder/F.jpg", "Billeder/G.jpg",  ];
+var BilledeStor = false;
+var BilledeNummer = 0;                    
+</pre>
                     <p>
-                        Nu mangler der kun fremknappen, før end at galleriet er færdigt.
-                        Den skal være næsten ligesom den funktion du har lavet til tilbageknappen, så du kan til
-                        at starte med kopiere den funktion og rette navnet på den nye funktion til det rigtige og
-                        sørge for at billedenummeret bliver plusset, i stedet for at blive minusset i else delen.
-                        Derudover skal if else delen også ændres en smule, det vil sige det skal byttes om, således at
-                        der kommer til at stå som følger.
+                        Så er det tid til at lave den Javascript som skal styre galleriet. Tila at starte med laves der en lytter til når websiden er indlæst i browseren. Lytteren sørger for at tilføje tre funktioner til når man klikker på billedet, knappen tilbage og knappen frem. Derudover bliver funktionen der laver thumbnails knapperne kaldt. Det ser ud på følgende måde og indsættes som det næste i Javascript filen.
                     </p>
                     <pre class="prettyprint linenums">
-if( BilledeNummer == Billeder.length - 1 )
+window.addEventListener( 'load', function()
 {
-BilledeNummer = 0;
-}
-else
-{
-BilledeNummer += 1;
-}
-document.getElementById( "Galleri" ).src = Billeder[ BilledeNummer ];
-}</pre>
-                    <p>Det var det, test nu galleriet i browseren og se om de to knapper får galleriet til at hoppe rundt ordentligt i billederne.</p>
+	document.getElementById( "KnapTilbage" ).onclick = GalleriBilledeTilbage;
+	document.getElementById( "KnapFrem" ).onclick = GalleriBilledeFrem;
+	document.getElementById( "GalleriBillede" ).onclick = GalleriBilledeStor;	
 
+	GalleriLavThumbnails();
+});                    
+                    </pre>
+                    
+                    <p>
+                        Derefter skal de fire funktioner laves, som bliver sat i gang når websiden er indlæst. Først laves tilbage funktionen. Den ser ud på følgende måde.
+                    </p>
+                    <pre class="prettyprint linenums">
+function GalleriBilledeTilbage()
+{
+	if( BilledeNummer == 0 )
+	{
+		BilledeNummer = Billeder.length - 1;
+	}
+	else
+	{
+		BilledeNummer -= 1;
+	}	
+	document.getElementById( "GalleriBillede" ).src = Billeder[ BilledeNummer ];
+}                    
+                    </pre>
+                    
+                    <p>
+                    	Når funktionen GalleriBilledeTilbage bliver sat i gang ved at brugeren klikker på tilbageknappen, checkes der med en if betingelse om at det er det første billede og hvis det er ændres nummeret til det sidste nummer i arrayet. Ellers trækkes der 1 fra nummeret og uanset hvilken en af if else mulighederne der blev valgt, ændres src på img tagget til den nye billedsti. Funktionen GalleriBilledeFrem gør bare det modsatte og ser ud som følger.
+                    </p>
+                    
+                    <pre class="prettyprint linenums">
+function GalleriBilledeFrem()
+{
+	if( BilledeNummer == Billeder.length - 1 )
+	{
+		BilledeNummer = 0;
+	}
+	else
+	{
+		BilledeNummer += 1;
+	}	
+	document.getElementById( "GalleriBillede" ).src = Billeder[ BilledeNummer ];
+}
+
+                    </pre>
+                    <p>
+                       De thumbnails, som automatisk bliver genereret på baggrund af antallet af billeder i arrayet, bliver lavet når websiden er indlæst og funktionen GalleriLavThumbnails bliver kaldt. Javascript koden til funktionen ser ud som følger.
+                    </p>
+<pre class="prettyprint linenums">
+function GalleriLavThumbnails()
+{
+	var AntalBilleder = Billeder.length;
+	var ThumbnailNummer = 0;
+	
+	while( ThumbnailNummer < AntalBilleder )
+	{
+		document.getElementById( "GalleriThumbnails" ).innerHTML += '&lta onclick="GalleriBilledeSkift(' + ThumbnailNummer + ')">&lt/a>';
+		ThumbnailNummer += 1;
+	}
+}
+</pre>
+                    
+
+                    <p>
+                    Funktionen laver to variabler til at starte med. Den første variabel bliver sat til det antal som der er billeder i arrayet med billedstier og den anden bliver sat til 0 da det er den første position i arrayet med billedstier. Så sættes en while løkke i gang som kører så alle billedstierne igennem og for hver eneste af dem laver et a tag med en funktion som hedder GalleriBilledeSkift sat til en lytter når man klikker på a tagget. GalleriBilledeSkift funktionen får det tal ind som parameter i funktionen som passer med billednummeret. Bagefter opskrives variablen ThumbnailNummer og en thumbnail mere bliver muligvis lavet til det næste billede.
+                    </p>
+                    
+                    <p>
+                     Funktionen GalleriBilledeSkift, som hver eneste thumbnail link kalder ser ud på følgende måde.
+                    </p>
+                    <pre class="prettyprint linenums">
+function GalleriBilledeSkift( SkiftTilBilledeNummer )
+{
+	document.getElementById( "GalleriBillede" ).src = Billeder[ SkiftTilBilledeNummer ];
+}
+</pre>
+
+	<p>
+    	Det eneste funktionen GalleriBilledeSkift gør er at den tager fat i img tagget for galleriet og skifter src attributten til den nye billedsti der er på den position i billedarrayet som SkiftTilBilledeNummer værdien angiver.
+    </p>
+	<p>
+    	Sidste funktionalitet der mangler at blive lavet før galleriet er færdigt er er få img tagget til at blive fuldskærm når man klikker på billedet i galleriet. Img tagget har allerede fået tilføejet en funktion når man klikker på galleribilledet, nemlig funktionen GalleriBilledeStor, der tilføjes når websiden er indlæst. GalleriBilledeStor funktionen ser ud på følgende måde.
+    </p>
+<pre class="prettyprint linenums">
+function GalleriBilledeStor()
+{
+	if( BilledeStor == false )
+	{
+		document.getElementById( "Galleri" ).style.position = "fixed";
+		BilledeStor = true;
+	}
+	else
+	{
+		document.getElementById( "Galleri" ).style.position = "relative";
+		BilledeStor = false;
+	}
+}
+</pre>
+
+            <p>
+            	Når der klikkes på img tagget, checkes der med en if else struktur om BilledeStor variablen er sat til false eller true. Til at starte med er den false, da billedet ikke er i fuldskærm. Alt efter hvad BilledeStor variablen er sat til vil den blive sat til det modsatte, da den skal skifte og CSS position egenskaben sættes til enten fixed eller relative, hvilket gør at galleriet skifter. Fixed får billedet til at sætte størrelsen til 100% i forhold til browseren og relative får billedet til at sætte størrelsen til 100% i forhold til hvor den ligger henne.
+            </p>
+            
+            <p>
+            	Galleriet er nu færdigt, så check i browseren om alt fungerer ordentligt, med thumbnail, fuldskærm og frem og tilbage knapperne.
+            </p>
                 </section>
 
                 <!-- Formularvalidering -->
                 <section id="Formularvalidering">
                     <div class="page-header">
-                        <h1>Formularvalidering</h1>
+                        <h1>Opgave </h1>
+                        <p class="lead">Formularvalidering</p>
                     </div>
                     <p>
                         I denne opgave skal du lave en formular, der sørger for, at det man indtaster, valideres
 inden at formularen sendes.
                     </p>
                     <p>
-                        Det første du skal lave er derfor en tom HMTL side, med tilhørerende CSS fil og lave en
+                        Det første der skal laves er derfor en tom HMTL side, med tilhørerende CSS fil og lave en
                         formular med et form tag, der indeholder en række label og input tags, plus et p tag til
                         fejlbeskederne bagefter.
                     </p>
@@ -450,37 +557,30 @@ inden at formularen sendes.
                         deres eget navn i id attributten. Udseendet af formularen behøves ikke at ligne
                         fuldstændig, det vigtigste er opbygningen, elementerne og navnene.
                     </p>
-                    <img src="img/opgaver/opgaveForm/form.fw.jpg" />
+                    <img src="img/Opgaver/OpgaveFormularvalidering/FormularOpbygning.png" />
                     <p>
                         Når formularen er lavet i HTML og CSS, er det blevet tid til at lave en ny tom Javascript
                         fil og tilføje et script tag der linker til den i head tagget, så funktionaliteten i
                         formularen kan blive lavet som det næste.
                     </p>
                     <p>
-                        Det første der skal laves af Javascript, er ligesom i de to foregående opgaver en
+                        Det første der skal laves af Javascript, er ligesom i de foregående opgaver en
                         hændelse når websiden er indlæst. Hændelsen skal sørge for at formularen får tilknyttet
-                        en funktion der hedder "SendIkke", når der submittes, det vil sige submitknappen trykkes
-                        og at submitknappen får tilknyttet en funktion der hedder "Valider", når submitknappen
-                        trykkes. De to funktioner går begge i gang når der trykkes på send knappen, men hvor
-                        submit funktionen bare sørger for at formularen ikke sendes når man trykker på, hvilket
-                        sker automatisk, når man har en submit knap i en form, så sørger klik funktionen for at
-                        man kan validere og selv bestemme, hvornår formularen skal sendes.
+                        en funktion der hedder "Valider", når formularen submittes ved tryk på submit knappen. Funktionen sørger for at man kan validere indtastningerne fra felterne og selv bestemme, og bestemme om formularen skal sendes ved at returnere enten true eller false.
                         Det giver følgende kode.
                     </p>
-                    <pre class="prettyprint linenums">window.onload = function()
+                    <pre class="prettyprint linenums">
+window.addEventListener( 'load', function()
 {
-document.getElementById("Formular01").onsubmit = SendIkke;
-document.getElementById("InputSend").onclick = Valider;
-};</pre>
+	document.getElementById("Formular01").onsubmit = Valider;
+});                    
+                    </pre>
                     <p>
                         Herefter laves submit funktionen, der bare skal sørge for at give en instruktion, nemlig
                         return false hvilket blokerer afsendelsen af formularen.
                         Den ser derfor sådan her ud.
                     </p>
-                    <pre class="prettyprint linenums">function SendIkke()
-{
-return false;
-}</pre>
+                    
                     <p>
                         Det der nu mangler er selve valideringen, udskrivelsen af fejlbeskeder og afsendelsen af
                         formularen. Det nye der skal bruges i denne opgave, udover return false, som der
@@ -490,46 +590,82 @@ return false;
 
                     <p>
                         Lav nu funktionen til at validere. Denne funktion sætter, hver gang man trykker på send
-                        knappen, først to variabler, nemlig talvariablen AntalFejl og tekstvariablen FejlBesked til
-                        henholdsvis 0 og "", hvor "" betyder at der ikke er noget tekst til at starte med. Derefter
-                        skal der være en if struktur til hver af de tre felter, som spørger om de er tomme. Hvis
+                        knappen, først fire variabler, nemlig talvariablen AntalFejl og tekstvariablerne FejlBesked1, FejlBesked2 og FejlBesked3 til
+                        henholdsvis 0, "", "" og "", hvor "" betyder at der ikke er noget tekst til at starte med. Derefter skal der være en if else struktur til hver af de tre felter, som spørger om de er tomme. Hvis
                         de hver især er tomme, tælles der en fejl op i AntalFejl variablen og der tilføjes en
-                        passende tekst til FejlBesked variablen.
+                        passende tekst til FejlBesked variablen. Hvis de ikke er tomme, checkes der med et såkaldt regulært udtryk, som er et mønster der definerer hvilke tegn som er tilladte, om det indtastede ikke er i orden og der skal tælles en fejl op, plus laves en fejlbesked.
                     </p>
 
                     <p>
                         Til sidst bruges en if else struktur til at checke om der er talt nogen fejl op i AntalFejl
                         variablen. Hvis der ingen fejl er sendes formularen og hvis der er nogen fejl skrives
-                        teksten med fejlbeskeder fra FejlBesked variablen, ind i p tagget til fejlbeskederne.
+                        teksten med fejlbeskeder fra FejlBesked variablerne, ind i p tagsene til fejlbeskederne.
                         Koden til valideringsfunktionen bliver dermed som følger.
                     </p>
-                    <pre class="prettyprint linenums">function Valider()
+                    <pre class="prettyprint linenums">
+function Valider()
 {
-var AntalFejl = 0;
-var FejlBesked = "";
-if( document.getElementById( 'InputNavn' ).value == "" )
-{
-AntalFejl += 1;
-FejlBesked += "Skriv dit navn!<br />";
-}
-if( document.getElementById( 'InputPostnummer' ).value == "" )
-{
-AntalFejl += 1;
-FejlBesked += "Skriv dit postnummer!<br />";
-}
-if( document.getElementById( 'InputMail' ).value == "" )
-{
-AntalFejl += 1;
-FejlBesked += "Skriv din mail!<br />";
-}
-if( AntalFejl == 0 )
-{
-document.getElementById( 'Formular01' ).submit();
-}
-else
-{
-document.getElementById( 'PTagFejl' ).innerHTML = FejlBesked;
-}
+	var AntalFejl = 0;
+	var FejlBesked1 = "";
+	var FejlBesked2 = "";
+	var FejlBesked3 = "";
+	
+	if( document.getElementById( 'InputNavn' ).value == "" )
+	{	
+		AntalFejl += 1;
+		FejlBesked1 = "Skriv dit navn!";
+	}
+	else
+	{
+		var regexpbogstaver = /^[a-zA-Z ]+$/;
+		if( !regexpbogstaver.test( document.getElementById('InputNavn').value ) )
+		{
+			AntalFejl += 1;
+			FejlBesked1 = "Navn må kun indeholde bogstaver og mellemrum!";
+		}
+	}
+	
+	if( document.getElementById( 'InputPostnummer' ).value == "" )
+	{
+		AntalFejl += 1;
+		FejlBesked2 = "Skriv dit postnummer!";
+	}
+	else
+	{
+		var regexptal = /^[0-9]+$/;
+		if( !regexptal.test( document.getElementById('InputPostnummer').value ) )
+		{
+			AntalFejl += 1;
+			FejlBesked2 += "Postnummer må kun indeholde tal!";
+		}
+	}
+	
+	if( document.getElementById( 'InputMail' ).value == "" )
+	{
+		AntalFejl += 1;
+		FejlBesked3 = "Skriv din mail!";
+	}
+	else
+	{
+		var regexpmail = /^[A-Za-zÆØÅæøå0-9_.]+[@]{1}[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+		if( !regexpmail.test( document.getElementById('InputMail').value ) )
+		{
+			AntalFejl += 1;
+			FejlBesked3 = "Mail er ikke gyldig!";
+		}
+	}
+	
+	if( AntalFejl == 0 )
+	{
+		return true;
+	}
+	else
+	{
+		document.getElementById( 'FejlBesked1' ).innerHTML = FejlBesked1;
+		document.getElementById( 'FejlBesked2' ).innerHTML = FejlBesked2;
+		document.getElementById( 'FejlBesked3' ).innerHTML = FejlBesked3;
+		return false;
+	}
 }</pre>
                     <p>
                         Formularen skulle nu gerne validere indtastningsfelterne, for om der er indtastet noget i
@@ -561,23 +697,52 @@ hensigten.
                                         ================================================== -->
     <footer class="footer">
         <div class="container">
-            <p class="lead">Undervisningsmateriale tilhøre Roskilde Tekniske Skole</p>
-            <p>|------------------------------[ Bootstrap licensed ]------------------------------|</p>
             <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
             <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
             <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+            <ul class="footer-links">
+                <li><a href="http://blog.getbootstrap.com">Blog</a></li>
+                <li class="muted">&middot;</li>
+                <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
+                <li class="muted">&middot;</li>
+                <li><a href="https://github.com/twbs/bootstrap/releases">Changelog</a></li>
+            </ul>
         </div>
     </footer>
 
     <!-- Le javascript
-                        ================================================== -->
+                                        ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <!--script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script-->
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
     <script src="assets/js/holder/holder.js"></script>
     <script src="assets/js/google-code-prettify/prettify.js"></script>
     <script src="assets/js/application.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script>
+        /*
+    Menu
+*/
+        var items = $("section");
+        var ul = $('.bs-docs-sidenav');
+        $(items).each(function () {
+            var item = $(this);
+            ul.append('<li><a href="#' + item.attr("id") + '"><i class="icon-chevron-right"></i>' + $("h1", item).text() + " " + $(".page-header .lead", item).text() + '</a></li>');
+        });
+        $("li:first", ul).addClass("active");
+    </script>
 
 </body>
 </html>
