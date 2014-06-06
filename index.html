@@ -1,213 +1,233 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Getting · Bootstrap</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Le styles -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="assets/css/docs.css" rel="stylesheet">
-    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-    <link href="assets/css/app.css" rel="stylesheet" />
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-                          <script src="assets/js/html5shiv.js"></script>
-                        <![endif]-->
-    <!-- Le fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
-</head>
-<body data-spy="scroll" data-target=".bs-docs-sidebar">
-    <!--====================================================================
-
-                    ::::::::: ::::::::::: ::::::::
-                    :+:    :+:    :+:    :+:    :+:
-                    +:+    +:+    +:+    +:+
-                    +#++:++#:     +#+    +#++:++#++
-                    +#+    +#+    +#+           +#+
-                    #+#    #+#    #+#    #+#    #+#
-                    ###    ###    ###     ########
-    ==================================================================== -->
-
-    <!-- Navbar
-                        ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
+    <head>
+        <meta charset="utf-8">
+        <title>WI GF - Javascript Opgaver</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- Le styles -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="assets/css/docs.css" rel="stylesheet">
+        <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+                    <!--[if lt IE 9]>
+                                          <script src="assets/js/html5shiv.js"></script>
+                                        <![endif]-->
+        <!-- Le fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+                    <!-- Navbar
+                                        ================================================== -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="./index.html">Javascript</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="./index.html">Indledning</a>
+                            </li>
+                            <li class="">
+                                <a href="./begreber.html">Begreber</a>
+                            </li>
+                            <li class="">
+                                <a href="./dom.html">Dom</a>
+                            </li>
+                            <li class="">
+                                <a href="./opgaver.html">Opgaver</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <!-- Subhead
+                                    ================================================== -->
+        <header class="jumbotron subhead" id="overview">
             <div class="container">
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="brand" href="./index.html">Javascript</a>
-                <div class="nav-collapse collapse">
-                    <ul class="nav">
-                        <li class="active">
-                            <a href="./index.html">Indledning</a>
-                        </li>
-                        <li class="">
-                            <a href="./begreber.html">Begreber</a>
-                        </li>
-                        <li class="">
-                            <a href="./dom.html">Dom</a>
-                        </li>
-                        <li class="">
-                            <a href="./opgaver.html">Opgaver</a>
-                        </li>
+                <h1>Indledning til JavaScript</h1>
+                <!--p class="lead">Overview of the project, its contents, and how to get started with a simple template.</p-->
+            </div>
+        </header>
+
+        <div class="container">
+                            <!-- Docs nav
+                                                    ================================================== -->
+            <div class="row">
+                <div class="span3 bs-docs-sidebar">
+                    <ul class="nav nav-list bs-docs-sidenav">
+      
                     </ul>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- Subhead
-                    ================================================== -->
-    <header class="jumbotron subhead" id="overview">
-        <div class="container">
-            <h1>Indledning til JavaScript</h1>
-            <!--p class="lead">Overview of the project, its contents, and how to get started with a simple template.</p-->
-        </div>
-    </header>
+                <div class="span9">
 
-    <div class="container">
-        <!-- Docs nav
-                                ================================================== -->
-        <div class="row">
-            <div class="span3 bs-docs-sidebar">
-                <ul class="nav nav-list bs-docs-sidenav"></ul>
-            </div>
-            <div class="span9">
+                                            <!-- Download
+                                                                                ================================================== -->
+                    <section id="Indledning">
+                        <div class="page-header">
+                            <h1>1. Indledning</h1>
+                        </div>
+                        <p class="lead">
+               Javascript er browseresn sprog, det er her man kan manipulere og arbejde med HTML og CSS.
+                        </p>
+                        <p>
 
-                <!-- Download
-                                                    ================================================== -->
-                <section id="Indledning">
-                    <div class="page-header">
-                        <h1>1. Indledning</h1>
-                    </div>
-                    <p class="lead">
-                        Javascript er browserens sprog, det er her man kan manipulere og arbejde med HTML og CSS.
-                    </p>
-                    <p>
-
-                        Javascript udføres heller ikke bare en gang, når websiden indlæses, ligesom i HTML og CSS.
-                    </p>
-                    <p>
-                        Javascript kan blive udført mange gange i løbet af den tid websiden vises i browseren.
-                    </p>
-                    <p>
-                        Javascript foregår på klientsiden, hvilket vil sige at den Javascript, der er blevet tilføjet på en webside, hentes ned sammen med HTML'en og CSS'en, når en webside vises i en klients browser og så udføres koden først herefter på klientens maskine i browseren. Man har derfor altid adgang til al den Javascript kode, som en webside indeholder.
-                    </p>
-                    <p>
-                        En god ting ved Javascript er, at man med Javascript instruktionerne har adgang til og kan ændre på HTML'en og CSS'en, mens websiden vises i browseren. Det kunne eksempelvis være at websiden skal skifte tekstfarven på et P tag, når brugeren klikker på P taget, hvilket kræver en ændring i CSS'en for P tagget eller at websiden skal tilføje tekst til et P tag, når brugeren klikker på en knap, hvilket kræver en ændring i HTML'en for P tagget.
-                    </p>
-                    <p>
-                        Selvom man kan få Javascript til at gøre alle de samme ting, som HTML'en og CSS'en gør, skal man dog ikke fuldstændigt droppe HTML'en og CSS'en, da Javascript kun skal bruges til de opgaver, som HTML'en og CSS'en ikke kan klare i sig selv. Man skal altså bruge HTML, CSS og Javascript i en kombination, hvor de hver især, håndterer det som de er beregnet til at håndtere og på den måde adskille indhold/struktur, udseende og opførsel fra hinanden.
-                    </p>
-                </section>
+              Javascript udføres heller ikke bare en gang, når websiden indlæses, ligesom i HTML og CSS.
+                        </p>
+                        <p>
+              Javascript kan blive udført mange gange i løbet af den tid websiden vises i browseren.
+                        </p>
+                        <p>
+Javascript foregår på klientsiden, hvilket vil sige at den Javascript, der er blevet tilføjet på en webside, hentes ned sammen med HTML'en og CSS'en, når en webside vises i en klients browser og så udføres koden først herefter på klientens maskine i browseren. Man har derfor altid adgang til al den Javascript kode, som en webside indeholder.
+                        </p>
+                        <p>
+En god ting ved Javascript er, at man med Javascript instruktionerne har adgang til og kan ændre på HTML'en og CSS'en, mens websiden vises i browseren. Det kunne eksempelvis være at websiden skal skifte tekstfarven på et P tag, når brugeren klikker på P taget, hvilket kræver en ændring i CSS'en for P tagget eller at websiden skal tilføje tekst til et P tag, når brugeren klikker på en knap, hvilket kræver en ændring i HTML'en for P tagget.
+                        </p>
+                        <p>
+Selvom man kan få Javascript til at gøre alle de samme ting, som HTML'en og CSS'en gør, skal man dog ikke fuldstændigt droppe HTML'en og CSS'en, da Javascript kun skal bruges til de opgaver, som HTML'en og CSS'en ikke kan klare i sig selv. Man skal altså bruge HTML, CSS og Javascript i en kombination, hvor de hver især, håndterer det som de er beregnet til at håndtere og på den måde adskille indhold/struktur, udseende og opførsel fra hinanden.
+                        </p>
+                    </section>
 
 
 
 
-                <section id="Indsættelse">
-                    <div class="page-header">
-                        <h1>2. Indsættelse af Javascript</h1>
-                    </div>
+                    <section id="Indsættelse">
+                        <div class="page-header">
+                            <h1>2. Indsættelse af Javascript</h1>
+                        </div>
 
 
-                    <p>
+                        <p>
                         Javascript kan nogenlunde ligesom CSS tilføjes en webside på tre forskellige måder, dog
-                        lidt mere løst og der er selvfølgelig fordele og ulemper ved hver af disse tre måder,
-                        såsom overskuelighed og effektivitet. Den mest overskuelige måde man tilføjer
-                        Javascript til en webside er ved at oprette en Javascript fil, som bare er en tekstfil
-                        med endelsen .js og bagefter linke til den i HTML filen, ligesom man gør med en CSS fil.
-                        Det er dog ikke helt det samme tag man skal benytte sig af som man gør, når man
+lidt mere løst og der er selvfølgelig fordele og ulemper ved hver af disse tre måder,
+såsom overskuelighed og effektivitet. Den mest overskuelige måde man tilføjer
+Javascript til en webside er ved at oprette en Javascript fil, som bare er en tekstfil
+med endelsen .js og bagefter linke til den i HTML filen, ligesom man gør med en CSS fil.
+Det er dog ikke helt det samme tag man skal benytte sig af som man gør, når man
                         tilføjer en CSS fil. Man tilføjer en Javascript fil til en webside, ved at indsætte et script
-                        tag i HTML'en med navnet på Javascript filen i src attributten.
-                    </p>
+tag i HTML'en med navnet på Javascript filen i src attributten.
+                        </p>
 
 
 
-                    <hr>
-                    <h2>nr. 1</h2>
-                    <p>
+                        <hr>
+                        <h2>nr. 1</h2>
+                        <p>
 
                         Derefter kan man i filen Javascript.js tilføje de Javascript instruktioner man vil have
-                        udført. Filen behøver ikke nødvendigvis at hedde Javascript.js, men den skal bare ende
-                        på js og ellers følge de normale regler for navngivning af filer. Man kan tilføje ligeså
-                        mange Javascript filer man vil til en webside.
-                    </p>
+udført. Filen behøver ikke nødvendigvis at hedde Javascript.js, men den skal bare ende
+på js og ellers følge de normale regler for navngivning af filer. Man kan tilføje ligeså
+mange Javascript filer man vil til en webside.
+                        </p>
 
-                    <pre class="prettyprint linenums">&lt;script src="Javascript.js">&lt;/script></pre>
-                    <hr>
-                    <h2>nr. 2</h2>
-                    <p>
-                        Hvis man derimod ikke vil have Javascript instruktionerne stående i en seperat fil, kan
-                        man undlade src attributten på script tagget og så bare skrive Javascript instruktionerne
-                        direkte inde i script tagget.
-                    </p>
+                        <pre class="prettyprint linenums">&lt;script src="Javascript.js">&lt;/script></pre>
+                        <hr>
+                        <h2>nr. 2</h2>
+                        <p>Hvis man derimod ikke vil have Javascript instruktionerne stående i en seperat fil, kan
+man undlade src attributten på script tagget og så bare skrive Javascript instruktionerne
+direkte inde i script tagget.
+                        </p>
 
-                    <pre class="prettyprint linenums">&lt;script>
-... javascript her ...
+                        <pre class="prettyprint linenums">&lt;script>
+	// javascript her...
 &lt;/script></pre>
-                    <hr>
-                    <h2>nr. 3</h2>
-                    <p>
-                        Den sidste mulighed der er for tilføjelse af Javascript på en webside, er at indsætte
-                        Javascript instruktionerne direkte på hændelsesattributterne. Man kan tilføje tagsene,
-                        såsom onblur, onclick eller onload.
-                    </p>
+                        <hr>
+                        <h2>nr. 3</h2>
+                        <p>
+Den sidste mulighed der er for tilføjelse af Javascript på en webside, er at indsætte
+Javascript instruktionerne direkte på hændelsesattributterne. Man kan tilføje tagsene,
+såsom onblur, onclick eller onload.
+                        </p>
 
-                    <pre class="prettyprint linenums">&lt;a onclick="sendData">Send Data&lt;/a></pre>
-                    <hr>
-                    <p>
-                        Selvom man ikke behøver at placere scripttags i head eller body tagget i sin HTML og man i
-                        princippet kan placere dem hvor som helst i sin HTML, anbefales det dog for
-                        overskuelighedens skyld, at man adskiller Javascript koden fra HTML koden og laver
-                        seperate Javascript filer, til de Javascript instruktioner, som man ønsker at der udføres
-                        på websiden og linker til sine Javascript filer i head tagget i sin HTML, ligesom man gør
-                        med CSS filer.
-                    </p>
+                        <pre class="prettyprint linenums">&lt;a onclick="this.style.background='red';">Skift&lt;/a></pre>
+                        <hr>
+                        <p>
+Selvom man ikke behøver at placere scripttags i head eller body tagget i sin HTML og man i
+princippet kan placere dem hvor som helst i sin HTML, anbefales det dog for
+overskuelighedens skyld, at man adskiller Javascript koden fra HTML koden og laver
+seperate Javascript filer, til de Javascript instruktioner, som man ønsker at der udføres
+på websiden og linker til sine Javascript filer sidst i sin HTML inden body tagget lukker, da man så får læst alt sin HTML ind i browseren inden Javascripten bliver læst og tilføjet af browseren.
+                        </p>
 
 
-                </section>
+                    </section>
 
-                <!-- nav -->
-                <div class="row">
-                    <div class="span4 offset5">
-                        <a href="begreber.html" class="btn btn-large btn-block btn-primary" type="button">Gå til næste side <i class="icon-forward icon-white"></i></a>
+                    <!-- nav -->
+                    <div class="row">
+                        <div class="span4 ">
+                            <a href="begreber.html" class="btn btn-large btn-block btn-primary" type="button"><i class="icon-backward icon-white"></i> Gå til forrige side</a>
+                        </div>
+                        <div class="span4 offset1">
+                            <a href="begreber.html" class="btn btn-large btn-block btn-primary" type="button">Gå til næste side <i class="icon-forward icon-white"></i></a>
+                        </div>
                     </div>
+                    <!-- nav :END-->
                 </div>
-                <!-- nav :END-->
             </div>
         </div>
-    </div>
 
-    <!-- Footer
-                        ================================================== -->
-    <footer class="footer">
-        <div class="container">
-            <p class="lead">Undervisningsmateriale tilhøre Roskilde Tekniske Skole</p>
-            <p>|------------------------------[ Bootstrap licensed ]------------------------------|</p>
-            <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
-            <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-            <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        </div>
-    </footer>
+                    <!-- Footer
+                                        ================================================== -->
+        <footer class="footer">
+            <div class="container">
+                <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+                <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+                <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+                <ul class="footer-links">
+                    <li><a href="http://blog.getbootstrap.com">Blog</a></li>
+                    <li class="muted">&middot;</li>
+                    <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
+                    <li class="muted">&middot;</li>
+                    <li><a href="https://github.com/twbs/bootstrap/releases">Changelog</a></li>
+                </ul>
+            </div>
+        </footer>
 
-    <!-- Le javascript
-                        ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/holder/holder.js"></script>
-    <script src="assets/js/google-code-prettify/prettify.js"></script>
-    <script src="assets/js/application.js"></script>
-    <script src="assets/js/app.js"></script>
+                    <!-- Le javascript
+                                        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!--script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script-->
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap-transition.js"></script>
+        <script src="assets/js/bootstrap-alert.js"></script>
+        <script src="assets/js/bootstrap-modal.js"></script>
+        <script src="assets/js/bootstrap-dropdown.js"></script>
+        <script src="assets/js/bootstrap-scrollspy.js"></script>
+        <script src="assets/js/bootstrap-tab.js"></script>
+        <script src="assets/js/bootstrap-tooltip.js"></script>
+        <script src="assets/js/bootstrap-popover.js"></script>
+        <script src="assets/js/bootstrap-button.js"></script>
+        <script src="assets/js/bootstrap-collapse.js"></script>
+        <script src="assets/js/bootstrap-carousel.js"></script>
+        <script src="assets/js/bootstrap-typeahead.js"></script>
+        <script src="assets/js/bootstrap-affix.js"></script>
+        <script src="assets/js/holder/holder.js"></script>
+        <script src="assets/js/google-code-prettify/prettify.js"></script>
+        <script src="assets/js/application.js"></script>
+          <script>
+              /*
+          Menu
+      */
+              var items = $("section");
+              var ul = $('.bs-docs-sidenav');
+              $(items).each(function () {
+                  var item = $(this);
+                  ul.append('<li><a href="#' + item.attr("id") + '"><i class="icon-chevron-right"></i>' + $("h1", item).text() + " " + $(".page-header .lead", item).text() + '</a></li>');
+              });
+              $("li:first", ul).addClass("active");
+    </script>
 
-</body>
+    </body>
 </html>
